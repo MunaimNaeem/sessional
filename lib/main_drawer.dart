@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:io';
 class MainDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class MainDrawer extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      image: DecorationImage(image: NetworkImage('https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fnature%2F&psig=AOvVaw3TAi4R8VFkPp0cKM9ASuzl&ust=1607257530437000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjjz_Xqtu0CFQAAAAAdAAAAABAD',
+                      image: DecorationImage(image: NetworkImage('https://drive.google.com/file/d/18SC4KsiMOCZxzIDaqKXTsHTPlH8lkOnt/view?usp=sharing',
                       ),
                         fit: BoxFit.fill
                       ),
@@ -47,18 +48,21 @@ class MainDrawer extends StatelessWidget {
             onTap: null,
           ),
           ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('SETTINGS', style: TextStyle(fontSize: 20,
+            leading: Icon(Icons.arrow_back),
+            title: Text('BACK TO HOME', style: TextStyle(fontSize: 20,
             ),
             ),
             onTap: null,
           ),
+
           ListTile(
-            leading: Icon(Icons.arrow_back),
-            title: Text('LOGOUT', style: TextStyle(fontSize: 20,
+            leading: Icon(Icons.exit_to_app),
+            title: Text('EXIT', style: TextStyle(fontSize: 20,
             ),
             ),
-            onTap: null,
+            onTap: (){
+              exit(0);
+            },
           ),
         ],
       ),

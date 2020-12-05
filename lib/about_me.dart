@@ -60,6 +60,8 @@ class _aboutState extends State<about> {
               Text('03023571424', style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
               SizedBox(height: 20,),
               Text('Munaimnaeem@gmail.com', style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+              SizedBox(height: 20,),
+              Text('https://github.com/MunaimNaeem/sessional', style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
             ],
           ),
         ),
