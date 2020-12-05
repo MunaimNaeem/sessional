@@ -1,5 +1,7 @@
 import 'package:flare_tutorial/splashscreen.dart';
 import 'package:flutter/material.dart';
+import 'Simple.dart';
+import 'hard.dart';
 
 void main() => runApp(SplashScreenPage());
 
@@ -50,11 +52,8 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
+      backgroundColor: Colors.white24,
+
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
@@ -75,20 +74,47 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+            Text ("SELECT LEVEL", style: TextStyle(fontSize: 40, color: Colors.white),),
+            SizedBox(
+              height: 70,
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 50, width: 150,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  margin: EdgeInsets.only(right: 35),
+                  child: FlatButton(onPressed: (){
+                    setState(() {
+                      Navigator.push(context,MaterialPageRoute(builder: (context)=>simple()));
+                    });
+                  },
+                    child: Text("Simple",style: TextStyle(fontSize: 35,color: Colors.redAccent),),
+                  ),
+                ),
+                Container(
+                  height: 50, width: 150,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  margin: EdgeInsets.only(left: 20),
+                  child: FlatButton(onPressed: (){
+                    setState(() {
+                      Navigator.push(context,MaterialPageRoute(builder: (context)=>hard()));
+                    });
+                  },
+                    child: Text("Hard",style: TextStyle(fontSize: 35,color: Colors.redAccent),),
+                  ),
+                )
+              ],
+            )
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
