@@ -1,8 +1,9 @@
+import 'package:flare_tutorial/main_drawer.dart';
 import 'package:flare_tutorial/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'Simple.dart';
 import 'hard.dart';
-
+import './main_drawer.dart';
 void main() => runApp(SplashScreenPage());
 
 class MyApp extends StatelessWidget {
@@ -53,6 +54,10 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       backgroundColor: Colors.white24,
+      appBar: AppBar(
+        title: Text('HOME PAGE'),
+      ),
+      drawer: MainDrawer(),
 
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
