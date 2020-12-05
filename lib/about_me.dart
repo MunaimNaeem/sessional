@@ -109,8 +109,8 @@ class _aboutState extends State<about> {
               Navigator.push(context, MaterialPageRoute(builder: (context)=>MyApp()));
             });
           },
-          child: Icon(Icons.keyboard_arrow_down),
-          backgroundColor: Colors.black,
+          child: Icon(Icons.home),
+          backgroundColor: Colors.green,
         ) );
   }
 }

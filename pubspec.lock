@@ -109,6 +109,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
+  show_drawer:
+    dependency: "direct main"
+    description:
+      name: show_drawer
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
+  show_overlay:
+    dependency: transitive
+    description:
+      name: show_overlay
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.8"
   sky_engine:
     dependency: transitive
     description: flutter
