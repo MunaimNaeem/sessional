@@ -15,7 +15,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch:Colors.purple
+        primarySwatch:Colors.grey
       ),
       home: SplashScreenWidget(),
     );

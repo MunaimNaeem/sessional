@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       title: 'SECOND SESSIONAL',
       theme: ThemeData(
 
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       home: MyHomePage(title: 'SECOND SESSIONAL'),
     );
