@@ -49,7 +49,7 @@ class _aboutState extends State<about> {
               CircleAvatar(
                 minRadius: 10,
                 maxRadius: 100,
-                backgroundImage: AssetImage("images/profile.jpg"),
+                backgroundImage: AssetImage("assets/logo.png"),
               ),
               SizedBox(
                 height: 30,
