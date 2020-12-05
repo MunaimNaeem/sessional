@@ -1,3 +1,4 @@
+import 'package:flare_tutorial/main.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 class MainDrawer extends StatelessWidget {
@@ -52,7 +53,9 @@ class MainDrawer extends StatelessWidget {
             title: Text('BACK TO HOME', style: TextStyle(fontSize: 20,
             ),
             ),
-            onTap: null,
+            onTap: () {
+              Navigator.pop(context, MaterialPageRoute(builder: (context) => MyApp()));
+            },
           ),
 
           ListTile(
