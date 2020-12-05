@@ -3,6 +3,7 @@ import 'package:flare_tutorial/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'Simple.dart';
 import 'hard.dart';
+import 'about_me.dart';
 import './main_drawer.dart';
 void main() => runApp(SplashScreenPage());
 
@@ -115,9 +116,28 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                     child: Text("Hard",style: TextStyle(fontSize: 35,color: Colors.redAccent),),
                   ),
-                )
+                ),
+
               ],
-            )
+            ),
+            SizedBox(
+              height: 150,
+            ),
+            Container(
+              height: 50, width: 150,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(30),
+              ),
+              margin: EdgeInsets.only(bottom: 35),
+              child: FlatButton(onPressed: (){
+                setState(() {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>about()));
+                });
+              },
+                child: Text("ABOUT ME",style: TextStyle(fontSize: 20,color: Colors.green),),
+              ),
+            ),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
