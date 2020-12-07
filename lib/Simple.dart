@@ -1,3 +1,4 @@
+import 'package:flare_tutorial/main.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 import 'dart:io';
@@ -15,12 +16,82 @@ class _simpleState extends State<simple> {
   String winer=null;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
+        appBar: AppBar(title: Text("SIMPLE LEVEL",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
+        ),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.all(20),
+              color: Colors.green,
+              child: Center(
+                child: Column(
+                  children: [
+                    Container(
+                      width: 100,
+                      height: 100,
+                      margin: EdgeInsets.only(
+                        top: 30,
+                        bottom: 10,
+                      ),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(image: NetworkImage('https://drive.google.com/file/d/18SC4KsiMOCZxzIDaqKXTsHTPlH8lkOnt/view?usp=sharing',
+                        ),
+                            fit: BoxFit.fill
+                        ),
+                      ),
+                    ),
+                    Text(
+                      'MUNAIM NAEEM', style: TextStyle(fontSize: 22, color: Colors.white,
+                    ),
+                    ),
+                    Text(
+                      'Munaimnaeem@gmail.com', style: TextStyle(fontSize: 20, color: Colors.white,
+                    ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text('PROFILE', style: TextStyle(fontSize: 20,
+              ),
+              ),
+              onTap: null,
+            ),
+            ListTile(
+              leading: Icon(Icons.arrow_back),
+              title: Text('BACK TO HOME', style: TextStyle(fontSize: 20,
+              ),
+              ),
+              onTap: () {
+                Navigator.pop(context, MaterialPageRoute(builder: (context) => MyApp()));
+              },
+            ),
+
+            ListTile(
+              leading: Icon(Icons.exit_to_app),
+              title: Text('EXIT', style: TextStyle(fontSize: 20,
+              ),
+              ),
+              onTap: (){
+                exit(0);
+              },
+            ),
+          ],
+        ),
+      ),
+      backgroundColor: Colors.teal,
+      body: Container(
       color: Colors.white24,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("SIMPLE DICE ROLLER", style: TextStyle(fontSize: 30,color: Colors.yellow),),
+          Text("SIMPLE DICE ROLLER", style: TextStyle(fontSize: 30,color: Colors.white, fontWeight: FontWeight.bold),),
           SizedBox(
             height: 70,
           ),
@@ -74,6 +145,7 @@ class _simpleState extends State<simple> {
           ),
         ],
       ),
+    ),
     );
   }
   void Check()

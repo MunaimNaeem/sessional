@@ -79,6 +79,7 @@ class _aboutState extends State<about> {
             ],
           ),
         ),
+        backgroundColor: Colors.teal,
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
