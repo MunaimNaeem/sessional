@@ -1,4 +1,4 @@
-# sessional
+# DICE ROLLING GAME
 
 A new Flutter application.
 
