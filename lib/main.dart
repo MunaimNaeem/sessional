@@ -1,5 +1,6 @@
 import 'package:flare_tutorial/main_drawer.dart';
 import 'package:flare_tutorial/splashscreen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'Simple.dart';
 import 'hard.dart';
@@ -54,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      backgroundColor: Colors.white24,
+      backgroundColor: Colors.teal,
       appBar: AppBar(
         title: Text('HOME PAGE'),
       ),
@@ -120,22 +121,23 @@ class _MyHomePageState extends State<MyHomePage> {
 
               ],
             ),
-            SizedBox(
-              height: 150,
-            ),
+            //SizedBox(
+              //height: 150,
+            //),
             Container(
               height: 50, width: 150,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Colors.grey,
                 borderRadius: BorderRadius.circular(30),
               ),
-              margin: EdgeInsets.only(bottom: 35),
+              margin: EdgeInsets.only(left: 200,top: 150, bottom: 0),
+              alignment: AlignmentDirectional.bottomEnd,
               child: FlatButton(onPressed: (){
                 setState(() {
                   Navigator.push(context,MaterialPageRoute(builder: (context)=>about()));
                 });
               },
-                child: Text("ABOUT ME",style: TextStyle(fontSize: 20,color: Colors.green),),
+                child: Text("ABOUT ME",style: TextStyle(fontSize: 23,color: Colors.black),),
               ),
             ),
           ],
